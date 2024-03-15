@@ -1,0 +1,5 @@
+[plugin]
+package = "pretix-order-checkin"
+modules = [ "order_checkin" ]
+marketplace_name = "order-checkin"
+

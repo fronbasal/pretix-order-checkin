@@ -1,0 +1,5 @@
+recursive-include order_checkin/static *
+recursive-include order_checkin/templates *
+recursive-include order_checkin/locale *
+include LICENSE
+exclude .gitlab-ci.yml

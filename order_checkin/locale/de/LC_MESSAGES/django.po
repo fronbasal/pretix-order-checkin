@@ -1,0 +1,32 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-15 01:40+0100\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Daniel Malik\n"
+"Language-Team: \n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: order_checkin/apps.py:17
+msgid "Pretix Check-in button on Order Page"
+msgstr "Pretix Check-in Button auf der Bestellseite"
+
+#: order_checkin/apps.py:19
+msgid "Add a check-in button to the order detail and overview page"
+msgstr "Fügt einen Check-in-Button zur Bestellübersichtsseite hinzu"
+
+#: order_checkin/templates/order_checkin/checked_out_buttons.html:17
+msgid "Delete Check-in"
+msgstr "Check-in löschen"
+
+#: order_checkin/templates/order_checkin/checked_out_buttons.html:22
+msgid "Check-out"
+msgstr "Check-out"
+
+#: order_checkin/templates/order_checkin/checkin_button.html:10
+msgid "Check-in"
+msgstr "Check-in"

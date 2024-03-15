@@ -1,0 +1,12 @@
+{% load i18n %}
+{% load bootstrap3 %}
+
+<form method="post" action="{% url "control:event.orders.checkinlists.bulk_action" event=event.slug organizer=event.organizer.slug list=checkinlist.pk %}" class="form-inline helper-display-inline">
+    <input name="returnquery" type="hidden" value="{{ returnquery }}">
+    <input name="checkin" type="hidden" value="{{ item }}">
+    {% csrf_token %}
+    <button class="btn btn-xs btn-primary" type="submit">
+        <span class="fa fa-check"></span>
+        {% trans "Check-in" %}
+    </button>
+</form>
