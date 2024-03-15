@@ -10,7 +10,7 @@ except ImportError:
 
 class PluginApp(PluginConfig):
     default = True
-    name = "order_checkin"
+    name = "pretix_order_checkin"
     verbose_name = "Pretix Check-in button on Order Page"
 
     class PretixPluginMeta:

@@ -24,14 +24,14 @@ def order_position_buttons(sender, order: Order, position: OrderPosition, reques
 
     # TODO: Handle "checked in but left" case
     if not checked_in.exists():
-        return render_to_string("order_checkin/checkin_button.html", {
+        return render_to_string("pretix_order_checkin/checkin_button.html", {
             "event": order.event,
             "checkinlist": checkin_list,
             "item": position.id,
             "returnquery": f"user={order.code}&item={position.item.id}",
         }, request=request)
     else:
-        return render_to_string("order_checkin/checked_out_buttons.html", {
+        return render_to_string("pretix_order_checkin/checked_out_buttons.html", {
             "event": order.event,
             "checkinlist": checkin_list,
             "item": position.id,

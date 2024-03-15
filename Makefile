@@ -1,5 +1,5 @@
 all: localecompile
-LNGS:=`find order_checkin/locale/ -mindepth 1 -maxdepth 1 -type d -printf "-l %f "`
+LNGS:=`find pretix_order_checkin/locale/ -mindepth 1 -maxdepth 1 -type d -printf "-l %f "`
 
 localecompile:
 	django-admin compilemessages

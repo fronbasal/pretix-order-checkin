@@ -2,7 +2,7 @@
 name = "pretix-order-checkin"
 dynamic = ["version"]
 description = "Add a check-in button to the order detail and overview page"
-readme = "README.rst"
+readme = "README.md"
 license = {text = "Apache"}
 keywords = ["pretix"]
 authors = [
@@ -16,7 +16,7 @@ dependencies = [
 ]
 
 [project.entry-points."pretix.plugin"]
-order_checkin = "order_checkin:PretixPluginMeta"
+pretix_order_checkin = "pretix_order_checkin:PretixPluginMeta"
 
 [project.entry-points."distutils.commands"]
 build = "pretix_plugin_build.build:CustomBuild"
@@ -35,8 +35,9 @@ repository = "https://github.com/fronbasal/pretix-order-checkin"
 include-package-data = true
 
 [tool.setuptools.dynamic]
-version = {attr = "order_checkin.__version__"}
+version = {attr = "pretix_order_checkin.__version__"}
 
 [tool.setuptools.packages.find]
 include = ["pretix*"]
 namespaces = false
+

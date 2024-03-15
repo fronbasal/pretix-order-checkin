@@ -1,6 +1,6 @@
 #!/bin/sh
 COMPONENTS=pretix/pretix-plugin-order-checkin
-DIR=order_checkin/locale
+DIR=pretix_order_checkin/locale
 # Renerates .po files used for translating the plugin
 set -e
 set -x

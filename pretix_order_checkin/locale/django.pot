@@ -17,22 +17,22 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: order_checkin/apps.py:17
+#: pretix_order_checkin/apps.py:17
 msgid "Pretix Check-in button on Order Page"
 msgstr ""
 
-#: order_checkin/apps.py:19
+#: pretix_order_checkin/apps.py:19
 msgid "Add a check-in button to the order detail and overview page"
 msgstr ""
 
-#: order_checkin/templates/order_checkin/checked_out_buttons.html:17
+#: pretix_order_checkin/templates/pretix_order_checkin/checked_out_buttons.html:17
 msgid "Delete Check-in"
 msgstr ""
 
-#: order_checkin/templates/order_checkin/checked_out_buttons.html:22
+#: pretix_order_checkin/templates/pretix_order_checkin/checked_out_buttons.html:22
 msgid "Check-out"
 msgstr ""
 
-#: order_checkin/templates/order_checkin/checkin_button.html:10
+#: pretix_order_checkin/templates/pretix_order_checkin/checkin_button.html:10
 msgid "Check-in"
 msgstr ""
