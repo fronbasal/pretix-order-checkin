@@ -16,7 +16,9 @@ class PluginApp(PluginConfig):
     class PretixPluginMeta:
         name = gettext_lazy("Pretix Check-in button on Order Page")
         author = "Daniel Malik"
-        description = gettext_lazy("Add a check-in button to the order detail and overview page")
+        description = gettext_lazy(
+            "Add a check-in button to the order detail and overview page"
+        )
         visible = True
         version = __version__
         category = "FEATURE"
