@@ -107,5 +107,5 @@ jobs:
         run: twine check dist/*
         working-directory: .
       - name: Upload package
-        run: twine upload dist/*
+        run: twine upload -u $TWINE_USERNAME -p $TWINE_PASSWORD --non-interactive dist/*
         working-directory: .
