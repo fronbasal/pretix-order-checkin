@@ -1,7 +1,7 @@
 [project]
 name = "pretix-order-checkin"
 dynamic = ["version"]
-description = "Add a check-in button to the order detail and overview page"
+description = "Adds check-in related buttons to the order overview page."
 readme = "README.md"
 license = {text = "Apache"}
 keywords = ["pretix"]

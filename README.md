@@ -4,13 +4,12 @@ This is a plugin for [pretix](https://github.com/pretix/pretix).
 
 Adds check-in related buttons to the order overview page.
 
-### Warning
+> [!WARNING]  
+> This feature is not implemented in Pretix due to incompatibility with events using multiple check-in lists; the plugin defaults to the first list accepting the product.
 
-The reason this isn't implemented in Pretix, is this won't work well for
-events with multiple check-in lists. This plugin takes the first list that accepts the product.
+This plugin situationally adds "check-in", "check-out" and "delete check-ins" buttons to the order overview page to quickly manage check-ins of your guests!
 
-
-# Development setup
+## Development setup
 
 1.  Make sure that you have a working [pretix development
     setup](https://docs.pretix.eu/en/latest/development/setup.html).

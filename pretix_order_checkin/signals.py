@@ -8,7 +8,7 @@ from pretix.control.signals import order_position_buttons
 
 @receiver(order_position_buttons, dispatch_uid="checkin_order_position_buttons")
 def order_position_buttons(
-        sender, order: Order, position: OrderPosition, request, **kwargs
+    sender, order: Order, position: OrderPosition, request, **kwargs
 ):
     # Retrieve checkin list from order
     checkin_list = CheckinList.objects.filter(

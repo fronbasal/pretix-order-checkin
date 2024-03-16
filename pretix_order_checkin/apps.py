@@ -11,13 +11,13 @@ except ImportError:
 class PluginApp(PluginConfig):
     default = True
     name = "pretix_order_checkin"
-    verbose_name = "Pretix Check-in button on Order Page"
+    verbose_name = "Pretix Order Check-in Buttons"
 
     class PretixPluginMeta:
-        name = gettext_lazy("Pretix Check-in button on Order Page")
+        name = gettext_lazy("Pretix Order Check-in Buttons")
         author = "Daniel Malik"
         description = gettext_lazy(
-            "Add a check-in button to the order detail and overview page"
+            "Adds check-in related buttons to the order overview page."
         )
         visible = True
         version = __version__

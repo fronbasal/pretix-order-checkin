@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-15 01:40+0100\n"
+"POT-Creation-Date: 2024-03-16 02:05+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,21 +18,21 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: pretix_order_checkin/apps.py:17
-msgid "Pretix Check-in button on Order Page"
+msgid "Pretix Order Check-in Buttons"
 msgstr ""
 
-#: pretix_order_checkin/apps.py:19
-msgid "Add a check-in button to the order detail and overview page"
+#: pretix_order_checkin/apps.py:20
+msgid "Adds check-in related buttons to the order overview page."
 msgstr ""
 
-#: pretix_order_checkin/templates/pretix_order_checkin/checked_out_buttons.html:17
-msgid "Delete Check-in"
+#: pretix_order_checkin/templates/pretix_order_checkin/check_in_button.html:10
+msgid "Check-in"
 msgstr ""
 
-#: pretix_order_checkin/templates/pretix_order_checkin/checked_out_buttons.html:22
+#: pretix_order_checkin/templates/pretix_order_checkin/check_out_button.html:12
 msgid "Check-out"
 msgstr ""
 
-#: pretix_order_checkin/templates/pretix_order_checkin/checkin_button.html:10
-msgid "Check-in"
+#: pretix_order_checkin/templates/pretix_order_checkin/delete_check_in_button.html:10
+msgid "Delete Check-in"
 msgstr ""
