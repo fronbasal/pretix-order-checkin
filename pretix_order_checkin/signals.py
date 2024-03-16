@@ -2,14 +2,13 @@
 from django.db.models import Q
 from django.dispatch import receiver
 from django.template.loader import render_to_string
-
-from pretix.base.models import OrderPosition, Order, CheckinList, Checkin
+from pretix.base.models import Checkin, CheckinList, Order, OrderPosition
 from pretix.control.signals import order_position_buttons
 
 
 @receiver(order_position_buttons, dispatch_uid="checkin_order_position_buttons")
 def order_position_buttons(
-    sender, order: Order, position: OrderPosition, request, **kwargs
+        sender, order: Order, position: OrderPosition, request, **kwargs
 ):
     # Retrieve checkin list from order
     checkin_list = CheckinList.objects.filter(
