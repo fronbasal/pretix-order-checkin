@@ -1,13 +1,8 @@
-# Pretix Check-in/out buttons on Order Page
+# Pretix Check-in buttons on Order Page
 
 This is a plugin for [pretix](https://github.com/pretix/pretix).
 
-Add a check-in button to the order detail and overview page.
-
-### TODOs:
-
-- [ ] Handle "checked in but left" case
-
+Adds check-in related buttons to the order overview page.
 
 ### Warning
 

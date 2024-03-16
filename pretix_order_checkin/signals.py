@@ -1,5 +1,5 @@
 # Register your receivers here
-from django.db.models import Q, Exists
+from django.db.models import Q
 from django.dispatch import receiver
 from django.template.loader import render_to_string
 
@@ -20,28 +20,38 @@ def order_position_buttons(
     if not checkin_list:
         return
 
-    checked_in = position.checkins.filter(list=checkin_list, successful=True).all()
+    output_html = ""
 
-    # TODO: Handle "checked in but left" case
-    if not checked_in.exists():
-        return render_to_string(
-            "pretix_order_checkin/checkin_button.html",
-            {
-                "event": order.event,
-                "checkinlist": checkin_list,
-                "item": position.id,
-                "returnquery": f"user={order.code}&item={position.item.id}",
-            },
+    checkins = position.checkins.filter(list=checkin_list, successful=True).order_by(
+        "-datetime"
+    )
+    has_left = (
+        False if not checkins.exists() else checkins.first().type == Checkin.TYPE_EXIT
+    )
+
+    template_ctx = {
+        "event": order.event,
+        "checkinlist": checkin_list,
+        "item": position.id,
+        "returnquery": f"user={order.code}&item={position.item.id}",
+    }
+
+    if has_left or not checkins.exists():
+        output_html += render_to_string(
+            "pretix_order_checkin/check_in_button.html", template_ctx, request=request
+        )
+
+    if checkins.exists():
+        if not has_left:
+            output_html += render_to_string(
+                "pretix_order_checkin/check_out_button.html",
+                template_ctx,
+                request=request,
+            )
+        output_html += render_to_string(
+            "pretix_order_checkin/delete_check_in_button.html",
+            template_ctx,
             request=request,
         )
-    else:
-        return render_to_string(
-            "pretix_order_checkin/checked_out_buttons.html",
-            {
-                "event": order.event,
-                "checkinlist": checkin_list,
-                "item": position.id,
-                "returnquery": f"user={order.code}&item={position.item.id}",
-            },
-            request=request,
-        )
+
+    return output_html

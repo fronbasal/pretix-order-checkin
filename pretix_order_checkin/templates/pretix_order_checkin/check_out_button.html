@@ -6,16 +6,6 @@
     <input name="returnquery" type="hidden" value="{{ returnquery }}">
     <input name="checkin" type="hidden" value="{{ item }}">
     {% csrf_token %}
-    <button
-            class="btn btn-xs btn-danger"
-            type="submit"
-            name="revert"
-            formaction="{% url "control:event.orders.checkinlists.bulk_revert" event=event.slug organizer=event.organizer.slug list=checkinlist.pk %}"
-            data-no-asynctask
-            value="true">
-        <span class="fa fa-trash"></span>
-        {% trans "Delete Check-in" %}
-    </button>
 
     <button class="btn btn-xs btn-warning" type="submit" name="checkout" value="true">
         <span class="fa fa-sign-out"></span>
