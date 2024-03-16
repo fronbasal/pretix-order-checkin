@@ -106,3 +106,6 @@ jobs:
       - name: Check package
         run: twine check dist/*
         working-directory: .
+      - name: Upload package
+        run: twine upload dist/*
+        working-directory: .
